@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: #9933cc;
+  color: #ffffff;
+  padding: 15px;
+  transition: background-color 0.3s; 
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #19191a;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer; 
+}
+
+.menu li:hover {
+  background-color: #3f4344;
+  transform: scale(1.1); 
+}
+
+.aside {
+  background-color: #444d50;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: transform 0.3s; 
+}
+
+.aside:hover {
+  transform: rotate(5deg); 
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+  transition: background-color 0.3s; 
+}
+
+.footer:hover {
+  background-color: #ff9900; 
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+</style>
+<style>
+
+body {
+  background-image: url('https://i.pinimg.com/564x/fd/42/af/fd42af8a3cacf086abbcf7bf874eb24d.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: #ffffff; 
+}
+
+
+.header {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.aside:hover {
+  background-color: rgba(55, 56, 56, 0.5); 
+}
+
+.menu li {
+  background-color: rgba(55, 56, 56, 0.5); 
+}
+
+.menu li:hover {
+  background-color: rgba(8, 8, 8, 0.7); 
+}
+
+
+.footer {
+  background-color: rgba(139, 146, 148, 0.5); 
+}
+
+.footer:hover {
+  background-color: rgba(22, 33, 64, 0.7); 
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Fundamental Javascript</h1>
+</div>
+
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <ul>
+        <li onclick="window.location.href='inline_script.html'">Inline Script</li>
+        <li onclick="window.location.href='external_script.html'">Embedded Script</li>
+    </ul>
+  </div>
+
+  <div class="col-6 col-s-9" style="color: #ffffff;">
+    <h1>Apa itu Fundamental JavaScript?</h1>
+    <p>Fundamental JavaScript merujuk pada dasar-dasar bahasa pemrograman JavaScript. JavaScript adalah salah satu bahasa pemrograman yang paling umum digunakan untuk mengembangkan situs web dan aplikasi web</p>
+</div>
+
+<div class="col-3 col-s-12">
+    <div class="aside">
+        <h1>Konsep dasar</h1>
+        <h2>Variabel</h2>
+        <p>Variabel digunakan untuk menyimpan data dalam JavaScript. Anda dapat mendeklarasikan variabel dengan kata kunci seperti var, let, atau const.</p>
+        <h2>Tipe Data</h2>
+        <p>JavaScript memiliki beberapa tipe data dasar, termasuk string (teks), number (angka), boolean (true/false), object (objek), dan banyak lagi.</p>
+        <h2>Fungsi</h2>
+        <p>Anda dapat membuat fungsi dalam JavaScript untuk mengelompokkan blok kode yang dapat digunakan kembali.</p>
+        <h2>Array</h2>
+        <p>Array digunakan untuk menyimpan sejumlah nilai dalam satu variabel.</p>
+    </div>
+</div>
+</div>
+
+<div class="footer">
+  <p>Resize the browser window to see how the content responds to resizing.</p>
+</div>
+</body>
+</html>
